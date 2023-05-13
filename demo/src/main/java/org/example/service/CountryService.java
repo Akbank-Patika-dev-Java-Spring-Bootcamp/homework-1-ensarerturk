@@ -21,6 +21,7 @@ public class CountryService {
     }
 
     public Country getCountryById(Long id) throws NotFoundException {
+
         return countryRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Country not found with id: " + id));
     }
